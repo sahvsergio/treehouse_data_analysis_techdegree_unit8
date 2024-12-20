@@ -47,6 +47,17 @@ def request_data():
         movie_box_office=int(res_json['BoxOffice'].strip('$').replace(',', ''))
         print(type(movie_box_office))
         
+    with open('movies.csv', 'w') as movie_file:
+        fieldnames = [
+            'Movie Title',
+            'Runtime',
+            'Genre',
+            'Award Wins' ,
+            'Award Nominations',
+            'Box Office' 
+            ]
+        movie_writer=csv.DictWriter(movie_file, fieldnames=fieldnames)
+        movie_writer.writeheader()
     
 
 
