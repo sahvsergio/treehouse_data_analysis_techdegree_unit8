@@ -60,7 +60,7 @@ def request_data():
                
             except Exception as e:
                 print(f'Error processing movie{movie_id}:{e}')
+    return 'movies.csv'
 
 
 
-request_data()
